@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: alehsan-customer-center
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: CUSTOMER_BOT_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ADMIN_ID
+        sync: false
